@@ -5,6 +5,8 @@ defmodule QiitaEx.API.Base do
 
   alias QiitaEx.Response
 
+  # TOOD: default headers
+
   @doc """
   Send API request, then return QiitaEx.Response
   """
