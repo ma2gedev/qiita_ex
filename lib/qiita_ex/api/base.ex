@@ -3,13 +3,27 @@ defmodule QiitaEx.API.Base do
   Provides basic and common functionalities for Qiita API.
   """
 
-  use HTTPoison.Base
+  alias QiitaEx.Response
 
-  def process_url(url) do
+  @doc """
+  Send API request, then return QiitaEx.Response
+  """
+  def request(access_token, method, path, params \\ []) do
+    headers = %{}
+    if access_token, do: headers = %{ "Authorization" => "Bearer #{access_token}" }
+    HTTPoison.request!(method, process_url(path), "", headers, params)
+    |> response
+  end
+
+  defp process_url(url) do
     "https://qiita.com/api/v2/" <> url
   end
 
-  def process_response_body(body) do
-    JSX.decode! body
+  defp response(response) do
+    %Response {
+      status_code: response.status_code,
+      headers: response.headers,
+      body: JSX.decode! response.body
+    }
   end
 end
