@@ -5,6 +5,12 @@ defmodule QiitaEx.Mixfile do
     [app: :qiita_ex,
      version: "0.0.1",
      elixir: "~> 1.0",
+     description: "Qiita API v2 Interface for Elixir",
+     package: [
+       contributors: ["Takayuki Matsubara"],
+       licenses: ["MIT"],
+       links: %{"GitHub" => "https://github.com/ma2gedev/qiita_ex"}
+     ],
      deps: deps]
   end
 
