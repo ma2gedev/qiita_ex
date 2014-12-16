@@ -50,7 +50,7 @@ defmodule QiitaEx.API.Base do
   end
 
   defp process_url(url) do
-    "https://qiita.com/api/v2/" <> url
+    "#{Application.get_env(:qiita_ex, :uri_scheme)}://#{Application.get_env(:qiita_ex, :host)}/api/v2/#{url}"
   end
 
   defp response(response) do
