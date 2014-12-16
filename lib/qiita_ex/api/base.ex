@@ -5,13 +5,11 @@ defmodule QiitaEx.API.Base do
 
   alias QiitaEx.Response
 
-  # TOOD: default headers
-
   @doc """
   Send API request, then return QiitaEx.Response
   """
   def request(access_token, method, path, params \\ %{}, headers \\ %{}) do
-    headers = headers |> Map.put("Content-Type", "application/json")
+    headers = headers |> Map.put("Content-Type", "application/json") |> Map.put("User-Agent", user_agent)
     if access_token, do: headers = headers |> Map.put("Authorization", "Bearer #{access_token}")
     url = if method == :get do
       process_url(path) <> URI.encode_query(params)
@@ -65,5 +63,9 @@ defmodule QiitaEx.API.Base do
       headers: response.headers,
       body: body
     }
+  end
+
+  defp user_agent do
+    'QiitaEx/#{QiitaEx.version} (Elixir/#{System.version})'
   end
 end

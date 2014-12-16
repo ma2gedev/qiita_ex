@@ -6,4 +6,8 @@ defmodule QiitaEx do
   defmodule Response do
     defstruct status_code: nil, body: nil, headers: %{}
   end
+
+  def version do
+    Mix.Project.config[:version]
+  end
 end
