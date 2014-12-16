@@ -18,7 +18,8 @@ defmodule QiitaEx.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :httpoison]]
+    [applications: [:logger, :httpoison],
+     env: [host: "qiita.com", uri_scheme: "https"]]
   end
 
   # Dependencies can be Hex packages:
