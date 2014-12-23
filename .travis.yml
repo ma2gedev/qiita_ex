@@ -11,3 +11,5 @@ before_script:
 sudo: false
 script:
   - mix test
+after_success:
+  - "mix compile && mix coveralls.travis"
