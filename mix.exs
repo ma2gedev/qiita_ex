@@ -11,6 +11,7 @@ defmodule QiitaEx.Mixfile do
        licenses: ["MIT"],
        links: %{"GitHub" => "https://github.com/ma2gedev/qiita_ex"}
      ],
+     test_coverage: [tool: ExCoveralls],
      deps: deps]
   end
 
@@ -33,6 +34,7 @@ defmodule QiitaEx.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:exjsx, "~> 3.0"},
+     {:excoveralls, "~> 0.3", only: :dev},
      {:httpoison, "~> 0.5"}]
   end
 end
