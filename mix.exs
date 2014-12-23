@@ -3,7 +3,7 @@ defmodule QiitaEx.Mixfile do
 
   def project do
     [app: :qiita_ex,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.0",
      description: "Qiita API v2 Interface for Elixir",
      package: [
