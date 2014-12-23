@@ -35,6 +35,7 @@ defmodule QiitaEx.Mixfile do
   defp deps do
     [{:exjsx, "~> 3.0"},
      {:excoveralls, "~> 0.3", only: :dev},
+     {:ex_doc, "~> 0.6", only: :dev},
      {:httpoison, "~> 0.5"}]
   end
 end
