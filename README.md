@@ -1,6 +1,6 @@
 # QiitaEx - Qiita API v2 Interface for Elixir
 
-[![hex.pm version](https://img.shields.io/hexpm/v/qiita_ex.svg)](https://hex.pm/packages/qiita_ex) [![hex.pm downloads](https://img.shields.io/hexpm/dt/qiita_ex.svg)](https://hex.pm/packages/qiita_ex)
+[![hex.pm version](https://img.shields.io/hexpm/v/qiita_ex.svg)](https://hex.pm/packages/qiita_ex) [![hex.pm downloads](https://img.shields.io/hexpm/dt/qiita_ex.svg)](https://hex.pm/packages/qiita_ex) [![Build Status](https://travis-ci.org/ma2gedev/qiita_ex.svg?branch=master)](https://travis-ci.org/ma2gedev/qiita_ex)
 
 ## Installation
 
